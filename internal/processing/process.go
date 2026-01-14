@@ -1,7 +1,18 @@
 package processing
 
-// ProcessLog takes a raw log line and adds a prefix.
-// It returns the processed string.
+import (
+	"strings"
+)
+
+
 func ProcessLog(line string) string {
 	return "Processed: " + line
+}
+
+func GetLogLevel(line string) string{
+	if(strings.Contains(line,"Error")){
+		return "Critical"
+	}else{
+		return "Info"
+	}
 }

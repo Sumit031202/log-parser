@@ -9,7 +9,7 @@ func main() {
     message := "Error: Database connection failed"
     
     // Calling the function from our internal package
-    result := processing.ProcessLog(message)
+    result := processing.GetLogLevel(message)
     
     fmt.Println(result)
 }
