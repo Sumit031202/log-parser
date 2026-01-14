@@ -1,15 +1,24 @@
 package main
 
 import (
-    "fmt"
-    "github.com/Sumit031202/log-parser/internal/processing"
+	"fmt"
+	"os"
+
+	"github.com/Sumit031202/log-parser/internal/processing"
+	// "golang.org/x/text/message"
 )
 
 func main() {
-    message := "Error: Database connection failed"
+	if(len(os.Args)<2){
+		fmt.Println("no input by the user")
+		return
+	}
+    // message := "Error: Database connection failed"
+	message:=os.Args[1]
     
     // Calling the function from our internal package
-    result := processing.GetLogLevel(message)
+    // result := processing.GetLogLevel(message)
+	result:=processing.ProcessLog(message)
     
     fmt.Println(result)
 }
