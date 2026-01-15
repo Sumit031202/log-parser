@@ -18,7 +18,13 @@ func main() {
     
     // Calling the function from our internal package
     // result := processing.GetLogLevel(message)
-	result:=processing.ProcessLog(message)
+	result:=processing.GetLogLevel(message)
+	if result==processing.LevelCrit {
+		fmt.Println("Critical Error Detected")
+		os.Exit(1)
+	}else{
+		fmt.Println("Log valid")
+	}
     
-    fmt.Println(result)
+    // fmt.Println(result)
 }
