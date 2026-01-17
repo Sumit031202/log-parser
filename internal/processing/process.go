@@ -5,9 +5,9 @@ import (
 )
 
 const (
-	ErrorKey="Error"
-	LevelCrit="Critical"
-	LevelInfo="Info"
+	ErrorKey="ERROR"
+	LevelCrit="CRITICAL"
+	LevelInfo="INFO"
 )
 
 func ProcessLog(line string) string {
